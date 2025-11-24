@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/mnt/data/github-header-banner.png" alt="Web Development Projects Banner" width="100%">
+  <img src="/assets/github-header-banner.png" alt="Web Development Projects Banner" width="100%">
 </p>
 
 <p align="center">
