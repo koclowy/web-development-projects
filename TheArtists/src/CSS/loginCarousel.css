@@ -1,0 +1,151 @@
+.carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-right: 100px;
+    gap: 100px;
+}
+
+.carousel, .carousel2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 330px;
+    height: 420px;
+    /* Remove height from each carousel */
+}
+  
+  .carousel .img {
+    border-radius: 0px;
+    position: absolute;
+    width: 330px;
+    height: 420px;
+    opacity: 0;
+    filter: drop-shadow(5px 5px 10px #0000003e);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    will-change: transform, opacity;
+    animation: carousel 30s linear infinite; /* duration should be 3 multiplied by the total number of cards */
+  }
+  
+  .carousel2 .img {
+    border-radius: 0px;
+    position: absolute;
+    width: 330px;
+    height: 420px;
+    opacity: 0;
+    filter: drop-shadow(5px 5px 10px #0000003e);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    will-change: transform, opacity;
+    animation: carousel2 30s linear infinite; /* duration should be 3 multiplied by the total number of cards */
+  }
+  
+
+  /* Increment animation delay by 3 for each card */
+  .img:nth-child(1) {
+    animation-delay: -3s;
+  }
+  
+  .img:nth-child(2) {
+    animation-delay: 0;
+  }
+  
+  .img:nth-child(3) {
+    animation-delay: 3s;
+  }
+  
+  .img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  .img:nth-child(5) {
+    animation-delay: 9s;
+  }
+
+  .img:nth-child(6) {
+    animation-delay: 12s;
+  }
+  
+  .img:nth-child(7) {
+    animation-delay: 15s;
+  }
+  
+  .img:nth-child(8) {
+    animation-delay: 18s;
+  }
+  
+  .img:nth-child(9) {
+    animation-delay: 21s;
+  }
+  
+  .img:last-child {
+    animation-delay: 24s;
+  }
+  
+  @keyframes  carousel {
+    0% {
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+    3%, 10% { /* 3, 100/total number of cards */
+      transform: translateY(-100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    13%, 20% { /* [(100/total number of cards) + 3], [(100/number of cards) * 2] */
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    23%, 30% { /* [(100/total number of cards)*2 + 3], [(100/number of cards) * 3] */
+      transform: translateY(100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    33% { /* [(100/total number of cards) * 3] + 3 */
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @keyframes  carousel2 {
+    0% {
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+    3%, 10% { /* 3, 100/total number of cards */
+      transform: translateY(100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    13%, 20% { /* [(100/total number of cards) + 3], [(100/number of cards) * 2] */
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    23%, 30% { /* [(100/total number of cards)*2 + 3], [(100/number of cards) * 3] */
+      transform: translateY(-100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    33% { /* [(100/total number of cards) * 3] + 3 */
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

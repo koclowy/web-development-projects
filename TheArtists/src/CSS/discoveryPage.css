@@ -1,0 +1,315 @@
+@font-face {
+    font-family: Satoshi;
+    src: url("/Web Application Programming/fonts/Satoshi-Black.otf");
+}
+
+* {
+    font-family: Satoshi;
+}
+
+/* making all text use same font */
+
+@font-face {
+    font-family: 'Tan-Nimbus';
+    src: url('/Web Application Programming/fonts/TAN-NIMBUS.otf');
+}
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi';
+    width: 100%;
+    /* Ensure the body spans the full width of the screen */
+    height: 100%;
+    /* Ensure it covers the full height of the screen */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+
+body {
+    background-image: url("/Web Application Programming/image/discoveryPage/bg 3.png");
+    background-color: black;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* header & footer class */
+.header {
+    all: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.footer {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+/* search bar */
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+    --first-color: hsl(222, 80%, 58%);
+    --dark-color: #404061;
+    --title-color: hsl(222, 8%, 8%);
+    --text-color-light: hsl(222, 8%, 65%);
+    --white-color: #fff;
+    --body-color: hsl(222, 100%, 99%);
+    --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --small-font-size: .875rem;
+    }
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* SEARCH */
+
+.searchbar-container {
+    display:flex;
+    position: absolute; 
+    top: 9%; 
+    left: 61%; 
+    z-index: 10; 
+    width: 100%; 
+    height: auto; 
+    margin-top: 60px; 
+}
+
+.search {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: var(--white-color);
+    box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+    border-radius: 4rem;
+    padding: 10px;
+    overflow: hidden;
+    transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.search__input {
+    border: none;
+    outline: none;
+    width: calc(100% - 64px);
+    height: 100%;
+    border-radius: 4rem;
+    padding-left: 14px;
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+}
+
+.search__input:-webkit-autofill {
+    box-shadow: 0 0 0 100px var(--white-color) inset;
+}
+
+.search__button {
+    width: 28px;
+    height: 28px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 3.5px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.search__icon,
+.search__close {
+    color: var(--white-color);
+    position: absolute;
+    transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.search__close {
+    opacity: 0;
+}
+
+/* Search animated */
+.show-search {
+    width: 100%;
+}
+
+.show-search .search__input {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.show-search .search__button {
+    transform: rotate(90deg);
+}
+
+/* when it opens the magnifine glass icon hides */
+.show-search .search__icon {
+    opacity: 0;
+}
+
+/* when it closes the magnifine glass icon shows */
+.show-search .search__close {
+    opacity: 1;
+}
+
+/* how far it opens out basically */
+@media screen and (min-width: 576px) {
+    .show-search {
+        width: 350px;
+    }
+}
+
+/* about artsit carousel */
+h3 {
+    font-size: 30px;
+    color: white;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+p {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+.artist {
+    align-items: center;
+    border-radius: 10px;
+    width: 230px;
+    height: 260px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.artist img {
+    position: relative;
+    bottom: 15%;
+    right: 4%;
+}
+
+.aboutArtist-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+
+    width: 240px;
+    height: 320px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s;
+    top: 0;
+}
+
+#next,
+#prev {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 400px;
+}
+
+#next {
+    left: unset;
+    right: 400px;
+}
+
+/* available songs button */
+.button-class {
+    background-color: transparent; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); 
+    border: 2px solid white; 
+    color: white; 
+    padding: 12px 30px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; 
+    font-family: 'Satoshi-LightItalic'; 
+    font-weight: 500; 
+
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 20px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.button-class:hover {
+    background-color: white; 
+    color: #5a6ca3; 
+    transform: translateX(-50%) scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.button-class:active {
+    transform: translateX(-50%) scale(0.98); 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+}

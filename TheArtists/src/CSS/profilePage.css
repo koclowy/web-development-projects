@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    font-family: 'Satoshi';
+}
+
+body {
+    background-image: url("/Web Application Programming/image/profilePage/landingPageBg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    /* Remove default body margin */
+    display: flex;
+    /* Enable flexbox layout */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    min-height: 100vh;
+    /* Ensure body height fills the viewport */
+}
+
+.header {
+    all: unset; /* Resets any inherited or conflicting styles */
+    position: fixed; /* Ensures it's fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.footer {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+#header {
+    color: white;
+}
+
+.card.overflow-hidden {
+    background-color: #000000b2;
+    /* Change this to your desired color */
+    border-radius: 10px;
+    /* Optional: Add rounded corners for styling */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: Add a shadow for effect */
+    color: white;
+}
+
+.list-group-item.list-group-item-action {
+    background-color: #000000a0;
+    color: white;
+}
+
+.font-weight-bold py-3 mb-4 {
+    width: 50%;
+    /* Adjust the width of your card */
+    max-width: 800px;
+    /* Optional: limit the maximum width */
+    padding: 20px;
+    /* Add inner padding for spacing */
+    border-radius: 8px;
+    /* Rounded corners for better visuals */
+    background: #ffffff;
+    /* Background for your card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
+}
+
+#uploadPictureText {
+    font-family: 'Satoshi-LightItalic';
+}
+
+.d-block.ui-w-80{
+    border-radius: 100px;
+}
+
+.ui-w-80 {
+    width: 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4E5155;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn.btn-outline-primary:hover {
+    border-color: transparent;
+    /* Optional: Change border */
+    background: #F9D993;
+    /* Background color when hovered */
+    color: #b88060;
+    /* Text color when hovered */
+}
+
+.btn.btn-outline-primary {
+    border-color: #b88060;
+    background: transparent;
+    color: #F9D993;
+}
+
+a:hover .btn.btn-outline-primary {
+    border-color: transparent;
+    background: #F9D993;
+    color: #b88060;
+}
+
+.btn.btn-outline-primary:active {
+    border-color: transparent;
+    background: #F9D993;
+    color: #b88060;
+}
+
+.btn.btn-default.md-btn-flat {
+    color: #F9D993;
+}
+
+.btn.btn-default.md-btn-flat:hover {
+    color: #b88060;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    border-color: transparent;
+    color: #b88060;
+    background: #F9D993;
+}
+
+.btn.btn-primary:hover {
+    border-color: transparent;
+    background: #b88060;
+    color: #F9D993;
+}
+
+.btn.btn-primary:active {
+    border-color: transparent;
+    background: #b88060;
+    color: #F9D993;
+}
+
+.btn.btn-primary:after {
+    border-color: transparent;
+    background: #b88060;
+    color: #F9D993;
+}
+
+.btn.btn-primary:active:after {
+    border-color: transparent;
+    background: #b88060;
+    color: #F9D993;
+}
+
+.btn.btn-default {
+    color: white;
+}
+
+.btn.btn-default:hover {
+    color: #F9D993;
+}
+
+.btn.btn-default:active {
+    color: #b88060;
+}
+
+.alert.alert-warning.mt-3 {
+    border-color: white;
+    color: #a3bfd7;
+    background: #2b3945;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.btn-facebook {
+    border-color: rgba(0, 0, 0, 0);
+    background: #3B5998;
+    color: #fff;
+}
+
+.btn-instagram {
+    border-color: rgba(0, 0, 0, 0);
+    background: #000;
+    color: #fff;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: #fff !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #ffffff !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.links {
+    font-family: 'Satoshi-LightItalic';
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #F9D993;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #b88060;
+}

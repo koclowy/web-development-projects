@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+  font-family: 'Tan-Nimbus';
+  src: url('/Web Application Programming/fonts/TAN-NIMBUS.otf');
+}
+
+@font-face {
+  font-family: 'Satoshi-LightItalic';
+  src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+/* Animations */
+@keyframes focus-in-expand {
+  0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+  }
+  100% {
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+      transform: scale(0.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes focus-glow {
+  0% {
+    box-shadow: 0 0 5px var(--primary);
+  }
+  100% {
+    box-shadow: 0 0 15px var(--primary);
+  }
+}
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+:root {
+  --bg-overlay: #00000025;
+  --primary: #F9D993;
+  --secondary: #b88060;
+  --text-light: #ffffff;
+  --text-muted: #F9D993;
+}
+
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Satoshi', 'Tan-Nimbus', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-image: url("/Web Application Programming/image/loginsignupPage/landingPageBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.name{
+  display:flex;
+  position: absolute;
+  left: 120px;
+  top: 25px;
+  color: white;
+  font-family: 'Satoshi';
+  font-size: 40px; 
+  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 1;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  transform: translateX(-40%);
+  animation: rotate-center 5s linear infinite;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+  padding: 40px;
+  background: #000000b2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+header {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  width: 400px; /* Take the full width of the container */
+  max-width: 400px; /* Leave some padding around */
+  padding: 1em; /* Adjust padding using relative units */
+  font-size: 1rem; /* Use rem for scalable text size */
+  border-radius: 15px;
+  margin-bottom: 10px; /* Add spacing between elements */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  background: #ffffff25;
+  color: white;
+}
+
+
+input:focus {
+  border-color: var(--primary);
+  background: var(--bg-overlay);
+  box-shadow: 0 0 10px var(--primary);
+  animation: focus-glow 0.8s ease-out forwards;
+}
+
+
+label {
+  position: absolute;
+  margin-bottom: 5px;
+  top: -25px;
+  left: 20px;
+  font-size: 15px;
+  font-family: 'Satoshi-LightItalic';
+  color: #F9D993;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -8px;
+  left: 20px;
+  font-size: 12px;
+  background: #00000025;
+  color: #F9D993;
+}
+
+/* Buttons */
+.btn {
+  width: 70%;
+  padding: 12px;
+  background: var(--primary);
+  color: var(--secondary);
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover{
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.field:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease-out;
+}
+
+/* Links */
+.links {
+  font-family: 'Satoshi-LightItalic';
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.links a {
+  color: #F9D993;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color:#b88060;
+}
+
+/* Placeholder Icon Styling */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.message {
+  font-family: 'Satoshi-LightItalic';
+  color:rgb(255, 255, 255);
+}

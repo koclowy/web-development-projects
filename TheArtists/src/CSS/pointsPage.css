@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 1.4em;
+        /* Adjust header size */
+    }
+
+    .total-points {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .daily-stars h2,
+    .reward-list h2 {
+        font-size: 1.1em;
+        /* Scale subheadings */
+    }
+
+    .coin {
+        width: 30px;
+        /* Smaller coin size */
+        height: 30px;
+        font-size: 1em;
+        /* Smaller font size */
+        line-height: 30px;
+        /* Center the text vertically */
+    }
+
+    #claimBtn {
+        font-size: 0.9em;
+        /* Smaller button font size */
+        padding: 6px 12px;
+        /* Reduced button padding */
+    }
+
+    .reward-item {
+        padding: 10px;
+        /* Reduced padding for reward items */
+    }
+}
+
+/* General Styles */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* Ensure full height is used */
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi';
+}
+
+body {
+    background-image: url("/Web Application Programming/image/pointsPage/pointsPageBg.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.navBar {
+    all: unset; /* Resets any inherited or conflicting styles */
+    position: fixed; /* Ensures it's fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.footer {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+/* Centering and Responsiveness */
+.container {
+    max-width: 840px;
+    /* Smaller max-width for a more compact container */
+    width: 90%;
+    /* Ensures container adjusts for smaller screens */
+    min-height: 1200px;
+    /* You can set a minimum height if needed */
+    background: transparent;
+    padding: 15px;
+    /* Reduced padding */
+    border-radius: 8px;
+    /* Slightly smaller border radius */
+    box-sizing: border-box;
+    margin: 20px 0 50px 0;
+    /* Add spacing for content */
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Reduced margin */
+}
+
+.header h1 {
+    font-family: 'Satoshi';
+    font-size: 2.0em;
+    /* Smaller header size */
+    color: #ffffff;
+    margin-bottom: 8px;
+    /* Reduced margin */
+}
+
+.custom-hr {
+    width: 100%;
+    /* Make it take full width, or adjust as needed */
+    height: 4px;
+    /* Thickness of the line */
+    background-color: white;
+    /* Color of the line */
+    border: none;
+    /* Remove default border */
+    margin: 20px 0;
+    /* Add spacing around the <hr> */
+}
+
+.daily-stars h2 {
+    font-size: 1.5em;
+    font-family: 'Satoshi';
+    color: white;
+}
+
+.daily-stars {
+    align-items: center;
+    /* Horizontally center content */
+    justify-content: center;
+    /* Align content to the top */
+    background: rgba(255, 255, 255, 0.201);
+    border-radius: 20px;
+    height: 23%;
+}
+
+.days-wrapper {
+    font-family: 'Satoshi';
+    color: white;
+}
+
+.total-points {
+    font-family: 'Satoshi-LightItalic';
+    font-size: 1em;
+    /* Smaller font size */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Daily Star Coins Section */
+.daily-stars {
+    margin-bottom: 20px;
+    /* Reduced margin */
+}
+
+.daily-stars h2 {
+    font-size: 2.3em;
+    /* Slightly smaller heading */
+    text-align: center;
+    margin-bottom: 12px;
+    /* Reduced margin */
+}
+
+.days-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Enables wrapping for smaller screens */
+    gap: 10px;
+    /* Reduced space between items */
+}
+
+.day {
+    text-align: center;
+    flex: 1 1 80px;
+    /* Reduced size */
+    margin: 8px;
+    /* Reduced margin */
+}
+
+.day p {
+    font-size: 0.9em;
+    /* Smaller font size */
+    margin: 4px 0;
+    /* Reduced margin */
+}
+
+.coin{
+  border-radius: 15px; /* Rounded corners */
+  background-color: #FFFFFF; /* White background for the container */
+  width: 80px; /* Adjust the size to fit your star image */
+  height: 100px;
+  display: flex; /* Flexbox for centering the content */
+  align-items: center; /* Center the star vertically */
+  justify-content: center; /* Center the star horizontally */
+  transition: transform 0.2s; /* Add a hover effect */
+}
+
+.coin img {
+    border: none;
+    padding: 0;
+    background: none;
+    display: block;
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 auto; /* Center the images */
+  }
+
+/* Claim Button */
+#claimBtn {
+    display: block;
+    margin: 0 auto 20px auto;
+    /* Reduced bottom margin */
+    padding: 8px 16px;
+    /* Reduced padding */
+    font-family: 'Satoshi';
+    font-size: 1em;
+    /* Smaller font size */
+    border: none;
+    border-radius: 15px;
+    background-color: #F9D993;
+    color: #b88060;
+    cursor: pointer;
+}
+
+#claimBtn:hover {
+    font-family: 'Satoshi';
+    background-color: #b88060;
+    color: #F9D993;
+}
+
+/* Reward List */
+.reward-list {
+    margin-top: 20px;
+    /* Reduced top margin */
+}
+
+.reward-list h2 {
+    color: white;
+    font-size: 2.3em;
+    /* Smaller heading */
+    font-family: 'Satoshi';
+    text-align: center;
+    margin-bottom: 15px;
+    /* Reduced margin */
+}
+
+.reward-item {
+    background-color: rgba(0, 0, 0, 0.458);
+    border: 1px solid rgba(0, 0, 0, 0.458);
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px;
+    /* Reduced padding */
+    margin-bottom: 15px;
+    /* Reduced margin */
+}
+
+.reward-item p {
+    color: #ffffff;
+    font-family: 'Satoshi';
+    margin: 0 0 8px 0;
+    /* Reduced margin */
+    font-size: 1em;
+    /* Smaller font size */
+    font-weight: bold;
+}
+
+.reward-item span {
+    font-size: 0.85em;
+    /* Smaller font size */
+    color: #ffffff;
+}
+
+
+#claimBtn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#totalPoints {
+    font-size: 3.0em;
+}
+
+.text-center h2{
+    color:white;
+    font-size:1.0em;
+    font-family: 'Satoshi-LightItalic';
+}

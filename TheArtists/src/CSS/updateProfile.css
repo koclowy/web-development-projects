@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-image: url("/Web Application Programming/image/updateProfilePage/landingPageBg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    /* Remove default body margin */
+    display: flex;
+    /* Enable flexbox layout */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    min-height: 100vh;
+    /* Ensure body height fills the viewport */
+}
+
+.name {
+    display: flex;
+    position: absolute;
+    left: 120px;
+    top: 1px;
+    color: white;
+    font-family: 'Satoshi';
+    font-size: 40px;
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    transform: translateX(-40%);
+    animation: rotate-center 5s linear infinite;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.box {
+    background: #000000b2;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.form-box {
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.form-box header {
+    font-size: 25px;
+    color: white;
+    font-family: 'Satoshi';
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F9D993;
+    margin-bottom: 10px;
+}
+
+.form-box form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+}
+
+.form-box form .input input {
+    height: 40px;
+    width: auto;
+    font-family: 'Satoshi';
+    font-size: 15px;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #4E5155;
+    border: 1px solid #000000;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.btn {
+    height: 35px;
+    font-family: 'Satoshi';
+    background: #F9D993;
+    border: 0;
+    border-radius: 5px;
+    color: #b88060;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.btn:hover {
+    color: #F9D993;
+    background: #b88060;
+}
+
+.field input {
+    color: rgb(0, 0, 0);
+    font-family: 'Satoshi';
+    font-size: 20px;
+}
+
+.form-box label {
+    font-size: 17px;
+    color: #ffffff;
+    font-family: 'Satoshi';
+}
+
+#submit {
+    color: #b88060;
+}
+
+#submit:hover {
+    color: #F9D993;
+}
+
+.message {
+    font-family: 'Satoshi';
+    color: white;
+    font-size: 20px;
+}

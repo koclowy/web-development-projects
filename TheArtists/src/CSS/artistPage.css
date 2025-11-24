@@ -1,0 +1,685 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url("/Web Application Programming/fonts/Satoshi-Black.otf");
+}
+
+@font-face {
+    font-family: 'Tan-Nimbus';
+    src: url('/Web Application Programming/fonts/TAN-NIMBUS.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi';
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Body and Font Styling */
+body {
+    font-family: 'Satoshi';
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("/Web Application Programming/image/artistPage/background2.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Header & Footer */
+.header {
+    all: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.footer {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+
+/* Back to artist page button */
+.back-btn {
+    font-family: 'Satoshi';
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    margin-top: 80px;
+    margin-left: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #ffffff;
+    color: #5a6ca3;
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 50px 20px;
+}
+
+.slider-images h1 {
+    font-size: 2em;
+}
+
+
+/* All Artist Slider */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+    background-image: url('imgs/background2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-btn {
+    display: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: 'Satoshi-LightItalic';
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.artist-btn:hover {
+    background-color: #ffffff;
+    color: #5a6ca3;
+    transform: scale(1.05);
+}
+
+.slider-images {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.slider-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.slider-img {
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+}
+
+.slider-images .slider-img:first-child,
+.slider-images .slider-img:last-child {
+    height: 480px;
+}
+
+.slider-images .slider-img:nth-child(2),
+.slider-images .slider-img:nth-child(6) {
+    height: 560px;
+}
+
+.slider-images .slider-img:nth-child(3),
+.slider-images .slider-img:nth-child(4),
+.slider-images .slider-img:nth-child(5) {
+    height: 665px;
+}
+
+h1 {
+    font-family: 'Satoshi';
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+}
+
+.details {
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+}
+
+.details h2 {
+    font-family: "Jost", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+}
+
+.slider-img.active {
+    width: 766px !important;
+    height: 750px !important;
+}
+
+.slider-img.active h1 {
+    display: none;
+}
+
+.slider-img.active .details p,
+.slider-img.active .details h2 {
+    display: block;
+}
+
+/* Artist Info Section */
+.artist-info {
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    padding-top: 100px;
+}
+
+/* Artist Image */
+.artist-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Artist Details */
+.artist-details {
+    text-align: left;
+    max-width: 600px;
+}
+
+.artist-details h1 {
+    font-size: 2.2rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.artist-details p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Artist Buttons */
+.artist-buttons button {
+    margin: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: 'Satoshi-LightItalic';
+    border: 2px solid white;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.artist-buttons button:hover {
+    background-color: white;
+    color: #5a6ca3;
+    font-family: 'Satoshi-LightItalic';
+}
+
+/* Album Carousel Section */
+.container {
+    position: relative;
+    top: 5%;
+    left: 20%;
+    width: 1000px;
+    height: 600px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px #ffffff;
+}
+
+.container .slide .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+
+.slide .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    background-color: transparent;
+    font-family: 'Satoshi-LightItalic';
+    font-size: 40px;
+    color: #5fa5c4;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background: transparent;
+    color: #305f73;
+    font-family: 'Satoshi-LightItalic';
+}
+
+/* Playlist Section */
+.playlist {
+    margin: 3rem auto;
+    padding: 20px;
+    background: rgba(137, 197, 188, 0.41);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    text-align: center;
+}
+
+.playlist h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.playlist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playlist-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.playlist-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.playlist-list li:last-child {
+    border-bottom: none;
+}
+
+/* Album Icon */
+.album-icon {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Song Name */
+.song-name {
+    flex-grow: 1;
+    color: #ffffff;
+}
+
+/* Duration */
+.duration {
+    color: #ffffff;
+    margin-right: 30px;
+}
+
+/* Like Button */
+.like-button {
+    background-color: #c3c3c3;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-button:hover {
+    background-color: #821717;
+    transform: scale(1.1);
+}
+
+.like-button:focus {
+    outline: none;
+}
+
+.like-button:active {
+    transform: scale(1);
+}
+
+/* Heart Icon */
+.like-button::before {
+    content: '❤︎';
+    font-size: 18px;
+    color: white;
+}
+
+/* Liked State */
+.liked .like-button {
+    background-color: #4caf50;
+}
+
+.liked .like-button:hover {
+    background-color: #45a049;
+}
+
+.liked .like-button::before {
+    content: '👍';
+}
+
+.listen-now-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Satoshi-LightItalic';
+}
+
+.listen-now-button:hover {
+    background-color: #ffffff;
+    color: #5a6ca3;
+    font-family: 'Satoshi-LightItalic';
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Merchandise Section */
+.merchandise {
+    padding: 2rem;
+    text-align: center;
+}
+
+.merchandise a {
+    color: #F9D993;
+}
+
+.merchandise a:hover {
+    color: #b88060;
+}
+
+.merchandise h2 {
+    font-size: 2rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+}
+
+.merchandise p {
+    font-size: 1rem;
+    font-family: 'Satoshi-LightItalic';
+    font-weight: normal;
+}
+
+.merch-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.merch-item {
+    background-color: #1e1e30;
+    border: 1px solid #5a5ad1;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 150px;
+    text-align: center;
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.merch-item h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.merch-item p {
+    font-size: 1.0rem;
+    color: #9b9bff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1e1e30;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for iPhone 16 Pro Max */
+@media screen and (max-width: 1290px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .artist-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .artist-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .artist-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .artist-details p {
+        font-size: 1rem;
+    }
+
+    .merch-grid {
+        gap: 1rem;
+    }
+
+    .merch-item {
+        width: 120px;
+    }
+}
+
+/* General Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .artist-info {
+        flex-direction: column;
+    }
+
+    .merch-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}

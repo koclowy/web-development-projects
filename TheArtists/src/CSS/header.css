@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element’s total width/height */
+}
+
+body, h1, a {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif; /* Modern font */
+    text-decoration: none;
+}
+
+/* Header Container */
+.header-container {
+    all: unset; /* Reset inherited styles */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e; /* Dark theme */
+    color: white;
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: sticky; /* Sticks to the top on scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left Section */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and name */
+}
+
+.header-left .name {
+    all: unset;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white; /* Highlighted text color */
+}
+
+.header-left .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; /* Rounded logo */
+    animation: rotate-center 5s linear infinite;
+}
+
+/* Center Section */
+.header-center {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.header-center a {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+}
+
+.header-center a:hover {
+    color: #F9D993;
+/* Underline effect on hover */
+}
+
+/* Right Section */
+.header-right {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header-right a {
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+}
+
+.header-right a:hover {
+    color: #F9D993;/* Underline effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .header-center {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .header-center a,
+    .header-right a {
+        font-size: 14px;
+    }
+}

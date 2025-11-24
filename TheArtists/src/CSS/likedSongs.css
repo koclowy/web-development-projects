@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/Web Application Programming/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: url('/Web Application Programming/fonts/Satoshi-LightItalic.otf');
+}
+
+
+.queue-container h1{
+    font-size: 16px;
+}
+
+/* WebKit Scrollbar Styling */
+.queue-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.queue-container::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 10px;
+}
+
+.queue-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.queue-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Queue Item Styling */
+.queue-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.queue-item:hover {
+    background-color: rgba(51, 51, 51, 0.9);
+    transform: translateX(5px);
+}
+
+.album-art {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.queue-info {
+    flex-grow: 1;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    color: #bbb;
+}
+
+.song-artist {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.2;
+}
+
+/* Remove Button */
+.remove-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #F9D993;
+    color: #1e1e1e;
+    transform: scale(1.1);
+}
+
+/* Back to Song List Button */
+.back-to-list-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.back-to-list-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #F9D993;
+    color: #1e1e1e;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-list-button:hover {
+    background-color: #b88060;
+    color: #F9D993;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Playing Song Highlight */
+.queue-item.playing {
+    background-color: #b88060;
+    color: #F9D993;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.queue-item.playing .remove-button {
+    background-color: #F44336;
+    border: 2px solid #F44336;
+}
+
+/* Add Button Styling */
+.song-item button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.addBtn img {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+}

@@ -1,0 +1,243 @@
+/* General Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer Styling */
+.footer {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Left Section */
+.footer-left {
+    all: unset;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    gap: 10px;
+    /* Spacing between album cover and track info */
+}
+
+.album-cover {
+    all: unset;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.track-info {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-title {
+    all: unset;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.track-artist {
+    all: unset;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Center Section */
+.footer-center {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    flex: 1;
+    /* Center section takes up remaining space */
+}
+
+.control-btn {
+    all: unset;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* Right Section */
+.footer-right {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 60px;
+}
+
+/* Center the play/pause button on the screen */
+.audio-controls {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 40px;
+    /* Adjust to your preferred height */
+}
+
+.audio-controls button {
+    all: unset;
+    width: 40px;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Progress bar container */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space the labels and bar evenly */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 600px;
+    /* Limit width for large screens */
+    margin: 10px auto;
+    /* Center horizontally */
+    gap: 10px;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    position: relative;
+    flex: 1;
+    /* Take up remaining space */
+    height: 8px;
+    background-color: #444;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: white;
+    width: 0%;
+    /* Default: no progress */
+    border-radius: 4px;
+    transition: width 0.1s;
+}
+
+/* Time labels styling */
+#current-time,
+#duration {
+    all: unset;
+    font-size: 14px;
+    color: white;
+    min-width: 40px;
+    /* Prevent shrinking of labels */
+    text-align: center;
+}
+
+button img {
+    all: unset;
+    width: 100%;
+    /* Make the image fill the button */
+    height: 100%;
+    /* Make the image fill the button */
+    object-fit: contain;
+    /* Ensure the image is not distorted */
+}
+
+.volume-control {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.volume-control img {
+    all: unset;
+    width: 20px;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+#volumeSlider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #ffffff 50%, #ffffff 50%);
+    /* Default fill */
+    accent-color: white;
+    background-size: 100% 100%;
+    /* Ensure full width/height of gradient */
+    background-repeat: no-repeat;
+    /* No repetition of the gradient */
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#volumeSlider:hover {
+    background: linear-gradient(to right, #ffffff 50%, #ffffff 50%);
+    accent-color: white;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background: white;
+    accent-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+#volumeSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+#volumeSlider::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    background: white;
+    accent-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+#volumeSlider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+#audioPlayer {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+}
