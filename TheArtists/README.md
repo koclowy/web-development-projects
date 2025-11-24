@@ -45,13 +45,13 @@ TheArtists/
 ├── data/               # MySQL database files (tables, inserts, exports)
 │
 ├── src/                # Main project source code
-│   ├── html/           # All HTML files (landing, login, discovery, artist, etc.)
+│   ├── html/           # All HTML files 
 │   ├── css/            # Stylesheets for pages and components
 │   ├── js/             # JavaScript for UI interactions, AJAX calls
 │   ├── php/            # Server-side scripts for logic, sessions, validation
 │   ├── images/         # Assets and backgrounds
 │   ├── fonts/          # Custom fonts
-│   └── sql/            # SQL setup files (tables, queries, sample data)
+│   └── sql/            # SQL setup files 
 │
 └── README.md           # Project documentation
 
