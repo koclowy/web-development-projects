@@ -54,4 +54,33 @@ TheArtists/
 │   └── sql/            # SQL setup files 
 │
 └── README.md           # Project documentation
+```
+
+## 🧠 What I Learned
+
+Through this project, I gained hands-on experience with:
+
+- Building full-stack web applications  
+- Connecting frontend to backend using **PHP + MySQL**  
+- Implementing secure login systems with **sessions**  
+- Protecting against **SQL injection** and **HTML injection**  
+- Designing relational databases and **ER diagrams**  
+- Creating dynamic **UI/UX** with JavaScript  
+- Handling **AJAX** operations for asynchronous updates (e.g., queue removal)  
+- Structuring large-scale web projects with well-organized folders  
+- Designing wireframes using **Figma** and system diagrams using **Draw.io**  
+- Writing clear and structured project documentation  
+
+---
+
+## 🌱 Future Enhancements
+
+Planned improvements:
+
+- Expand the database to include more songs, albums, and artist data  
+- Improve UI/UX design for a smoother and more modern experience  
+- Add recommendations powered by **Machine Learning** (future goal)  
+- Introduce playlist sharing or other social features  
+- Implement **dark/light mode**  
+- Allow users to add custom profile pictures and personalize settings  
 
