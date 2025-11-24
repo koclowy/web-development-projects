@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/landingPage.css">
+</head>
+
+<body>
+    <div class="stage">
+        <!--Name and Logo-->
+        <div class="logo-container">
+            <h1 class="name">meloverse</h1>
+            <img src="../image/landingPage/logodisk.png" alt="" class="logo">
+        </div>
+        <!--Welcome Text-->
+        <div class="welcome-container">
+            <h2 class="welcome">Welcome to Meloverse</h2>
+        </div>
+        <!--3D-Carousel-->
+        <div class="container">
+            <div class="ring">
+                <div class="img"><img src="../image/landingPage/Joji - Nectar.webp" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/ArianaGrande.jpg" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/BillieElish 1.png" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/Gabriela Bee.webp" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/Keshi.png" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/LanaDeyRey.jpg" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/Sza.png" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/Gracie Abrams 2.webp" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/New Jeans.webp" alt="" width="300" height="400">
+                </div>
+                <div class="img"><img src="../image/landingPage/Daniel Caesar.jpg" alt="" width="300" height="400">
+                </div>  
+            </div>
+        </div>
+        <!--Welcome Message to sign in-->
+        <div class="sign-in-text-container">
+            <h3 class="sign-in-text">Lets dive into a world of sound, where music becomes a part of you</h3>
+        </div>
+        <!--Sign in and Login Buttons-->
+        <div class="button-group">
+            <button class="sign-in-button blob-btn">
+                Sign Up
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+            <h3 class="OR-text">or</h3>
+            <button class="login-button blob-btn">
+                Login
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <!-- Blob SVG filter -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                </feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
+    <script src='../javascript/landingPage.js'></script>
+</body>
+
+</html>
