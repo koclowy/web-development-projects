@@ -1,4 +1,4 @@
-# 🎵 TheArtists – Full-Stack Music Streaming Web Application
+# TheArtists – Full-Stack Music Streaming Web Application
 
 **TheArtists** is a full-stack music streaming web application inspired by modern platforms like Spotify and Apple Music.  
 It allows users to discover artists, browse songs, manage playlists, track points, and enjoy a personalized music experience.
@@ -7,7 +7,7 @@ This project was built as part of my Web Application Programming module, focusin
 
 ---
 
-## 📌 Project Objectives
+## Project Objectives
 - Build a full-stack music streaming website with login, registration, and personalized user pages  
 - Allow users to browse artists, songs, albums, and merchandise  
 - Enable playback controls, queue management, and liked songs  
@@ -17,7 +17,7 @@ This project was built as part of my Web Application Programming module, focusin
 
 ---
 
-## 🧰 Technologies & Tools
+## Technologies & Tools
 
 ### **Languages**
 - HTML  
@@ -35,7 +35,7 @@ This project was built as part of my Web Application Programming module, focusin
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```plaintext
 TheArtists/
@@ -56,7 +56,7 @@ TheArtists/
 └── README.md           # Project documentation
 ```
 
-## 🧠 What I Learned
+## What I Learned
 
 Through this project, I gained hands-on experience with:
 
@@ -73,7 +73,7 @@ Through this project, I gained hands-on experience with:
 
 ---
 
-## 🌱 Future Enhancements
+## Future Enhancements
 
 Planned improvements:
 
